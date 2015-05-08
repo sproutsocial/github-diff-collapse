@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"name": "GitHub Diff Collapse",
+	"version": "0.2.0",
+	"permissions": [
+		"storage",
+		"*://*.github.com/*",
+		"*://github.com/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.github.com/*",
+				"*://github.com/*"
+			],
+			"js": [
+				"jquery.js",
+				"jquery.livequery.js",
+				"github.js"
+			],
+			"css": [
+				"github.css"
+			]
+		}
+	]
+}

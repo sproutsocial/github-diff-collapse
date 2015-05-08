@@ -1,0 +1,21 @@
+.gpr-collapse-expand {
+	margin-right: 5px;
+}
+ 
+.gpr-button-group {
+	margin-right: 1em;
+}
+
+.gpr-file-footer {
+	width: 100%;
+	height: 2em;
+	color: #333;
+	background-color: #f7f7f7;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+
+.gpr-file-footer span {
+	line-height: 2em;
+}

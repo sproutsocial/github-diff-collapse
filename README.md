@@ -13,6 +13,7 @@ to any GitHub or Bitbucket diff view (PRs, commit pages, branch comparisons, etc
 
 - Collapse/expand a single diff. (You can find the Collapse/Expand button in the file diff header,
 	next to the View button.)
+	![](docs/collapse.png)
 - Collapse a diff by using a button at the end of the file to avoid scrolling to the top. 
 	(This will collapse the diff and position the page at the start of the next diff.)
 - Collapse/expand all diffs at once. (You can find the Collapse All/Expand All buttons near the top
@@ -30,6 +31,6 @@ We'll weed them out as necessary.
 ## Installation
 
 One day we'll have this on the the Chrome web store, but for now you can find the latest build
-in the repository (`better-ull-requests.crx`). Just download it and open it - Chrome will take care of the rest.
+in the repository (`better-pull-requests.crx`). Just download it and open it - Chrome will take care of the rest.
 If for some reason Chrome won't allow you to install the extension by opening it (likely due to Chrome
 security/development settings), open the Chrome extensions page then drag-and-drop the extension file onto the page.

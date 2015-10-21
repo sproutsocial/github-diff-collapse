@@ -13,6 +13,7 @@ to any GitHub or Bitbucket diff view (PRs, commit pages, branch comparisons, etc
 
 - Collapse/expand a single diff. (You can find the Collapse/Expand button in the file diff header,
 	next to the View button.)
+	![](docs/collapse.png)
 - Collapse a diff by using a button at the end of the file to avoid scrolling to the top. 
 	(This will collapse the diff and position the page at the start of the next diff.)
 - Collapse/expand all diffs at once. (You can find the Collapse All/Expand All buttons near the top

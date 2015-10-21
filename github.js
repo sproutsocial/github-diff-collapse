@@ -43,7 +43,7 @@ function collapseAndScrollToNext(fileDiv) {
 }
 
 function addFileHeaderButton(fileDiv) {
-	var viewButton = $(fileDiv).find('.file-header .file-actions a.btn:first-of-type');
+	var viewButton = $(fileDiv).find('.file-header .file-actions > a.btn').first();
 	var collapseButton = '<a class="btn btn-sm gpr-collapse-expand">Collapse</a>';
 
 	$(collapseButton).insertBefore(viewButton).click(function() {

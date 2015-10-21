@@ -1,11 +1,11 @@
 function collapseDiff(fileDiv, callback) {
 	$(fileDiv).find('.file-header .gpr-collapse-expand').text('Expand').addClass('gpr-is-collapsed');
-	$(fileDiv).find('.blob-wrapper, .gpr-file-footer').hide(0, callback || $.noop);
+	$(fileDiv).find('.blob-wrapper, .render-wrapper, .gpr-file-footer').hide(0, callback || $.noop);
 }
 
 function expandDiff(fileDiv, callback) {
 	$(fileDiv).find('.file-header .gpr-collapse-expand').text('Collapse').removeClass('gpr-is-collapsed');
-	$(fileDiv).find('.blob-wrapper, .gpr-file-footer').show(0, callback || $.noop);
+	$(fileDiv).find('.blob-wrapper, .render-wrapper, .gpr-file-footer').show(0, callback || $.noop);
 }
 
 function toggleDiff(fileDiv) {
@@ -52,7 +52,7 @@ function addFileHeaderButton(fileDiv) {
 }
 
 function addFileFooterButton(fileDiv) {
-	var blobWrapper = $(fileDiv).find('.blob-wrapper');
+	var blobWrapper = $(fileDiv).find('.blob-wrapper, .render-wrapper');
 	var footer =
 		'<div class="gpr-file-footer">' +
 			'<span>Collapse</span>' +

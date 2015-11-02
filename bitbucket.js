@@ -180,7 +180,14 @@ function setup() {
 }
 
 $(function() {
-	// TODO: I'd like to make this a bit more efficient
-	$(document).livequery('*', setup);
+	var watchUpdateSelectors = [
+		'#compare',
+		'.commit-files-summary',
+		'.diff-content-container',
+		'.comment-thread-container',
+		'.bb-udiff'
+	];
+
+	$(document).livequery(watchUpdateSelectors.join(', '), setup);
 	setup();
 });

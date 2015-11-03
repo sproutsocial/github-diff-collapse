@@ -118,13 +118,24 @@ function setup() {
 }
 
 $(function() {
-	var watchUpdateSelectors = [
-		'#toc',
-		'.diff-view',
-		'.blob-wrapper',
-		'.render-wrapper'
-	];
+	// All the timeouts!
+	var setupTimer = null;
+	var debouncedSetup = function() {
+		if (setupTimer) {
+			clearTimeout(setupTimer);
+		}
 
-	$(document).livequery(watchUpdateSelectors.join(', '), setup);
-	setup();
+		setupTimer = setTimeout(function() {
+			setupTimer = null;
+			setup();
+		}, 500);
+	};
+
+	setTimeout(function() {
+		debouncedSetup();
+
+		setTimeout(function() {
+			$(document).livequery('*', debouncedSetup);
+		}, 1000);
+	}, 500);
 });

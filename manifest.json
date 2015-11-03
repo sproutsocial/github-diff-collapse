@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Better Pull Requests",
-	"version": "0.9.4",
+	"version": "0.9.5",
 	"permissions": [
 		"storage",
 		"*://*.github.com/*",

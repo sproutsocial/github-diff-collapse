@@ -180,14 +180,24 @@ function setup() {
 }
 
 $(function() {
-	var watchUpdateSelectors = [
-		'#compare',
-		'.commit-files-summary',
-		'.diff-content-container',
-		'.comment-thread-container',
-		'.bb-udiff'
-	];
+	// All the timeouts!
+	var setupTimer = null;
+	var debouncedSetup = function() {
+		if (setupTimer) {
+			clearTimeout(setupTimer);
+		}
 
-	$(document).livequery(watchUpdateSelectors.join(', '), setup);
-	setup();
+		setupTimer = setTimeout(function() {
+			setupTimer = null;
+			setup();
+		}, 500);
+	};
+
+	setTimeout(function() {
+		debouncedSetup();
+
+		setTimeout(function() {
+			$(document).livequery('*', debouncedSetup);
+		}, 1000);
+	}, 500);
 });

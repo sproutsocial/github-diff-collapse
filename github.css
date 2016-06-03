@@ -1,7 +1,17 @@
 .gpr-collapse-expand {
 	margin-right: 5px;
 }
- 
+
+.gpr-global-button-group {
+	display: block !important;
+	margin-bottom: 1em;
+	text-align: right;
+}
+
+.gpr-global-button-group .btn {
+	float: none !important;
+}
+
 .gpr-button-group {
 	margin-right: 1em;
 }

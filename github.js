@@ -68,6 +68,14 @@ function hasGlobalHeaderButtons() {
 }
 
 function addGlobalHeaderButtons() {
+	if ($('#toc .btn-group').length === 0) {
+		addPullRequestGlobalHeaderButtons();
+	} else {
+		addCommitDiffGlobalHeaderButtons();
+	}
+}
+
+function addCommitDiffGlobalHeaderButtons() {
 	var oldButtons = $('#toc .btn-group').first();
 	var newButtons =
 		'<div class="btn-group right gpr-button-group">' +
@@ -76,6 +84,20 @@ function addGlobalHeaderButtons() {
 		'</div>';
 
 	$(newButtons).insertAfter(oldButtons);
+
+	$('#gpr-collapse-all').click(collapseAll);
+	$('#gpr-expand-all').click(expandAll);
+}
+
+function addPullRequestGlobalHeaderButtons() {
+	var oldButtons = $('#files');
+	var newButtons =
+		'<div class="btn-group gpr-global-button-group">' +
+			'<a id="gpr-collapse-all" class="btn btn-sm">Collapse All</a>' +
+			'<a id="gpr-expand-all" class="btn btn-sm">Expand All</a>' +
+		'</div>';
+
+	$(newButtons).insertBefore(oldButtons);
 
 	$('#gpr-collapse-all').click(collapseAll);
 	$('#gpr-expand-all').click(expandAll);

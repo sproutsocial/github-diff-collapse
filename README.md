@@ -30,7 +30,9 @@ We'll weed them out as necessary.
 
 ## Installation
 
-One day we'll have this on the the Chrome web store, but for now you can find the latest build
-in the repository (`better-pull-requests.crx`). Just download it and open it - Chrome will take care of the rest.
+It can be found in the Chrome web store [here](https://chrome.google.com/webstore/detail/better-pull-requests/ioaepkkioliomgmnhkgkhcdoofgihhcc).
+
+It can also be installed manually. You can find the latest build in the repository (`better-pull-requests.crx`).
+Just download it and open it - Chrome will take care of the rest.
 If for some reason Chrome won't allow you to install the extension by opening it (likely due to Chrome
 security/development settings), open the Chrome extensions page then drag-and-drop the extension file onto the page.

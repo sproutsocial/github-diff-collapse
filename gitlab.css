@@ -1,0 +1,22 @@
+.gpr-global-button-group {
+	margin-bottom: 1em;
+	text-align: right;
+	width: 100%;
+}
+
+.gpr-global-button-group .btn {
+	margin-left: .5em !important;
+	float: none !important;
+}
+
+.gpr-footer-collapse-row td {
+	padding: 0 !important;
+}
+
+.gpr-footer-collapse-row td button {
+	width: 100%;
+	border: none;
+	font-weight: bold;
+	font-family: sans-serif;
+	background-color: #eee;
+}

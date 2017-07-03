@@ -10,6 +10,7 @@
 
 .gpr-global-button-group .btn {
 	float: none !important;
+	margin-left: .5em;
 }
 
 .gpr-button-group {
